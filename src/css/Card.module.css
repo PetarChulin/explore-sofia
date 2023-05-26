@@ -1,0 +1,107 @@
+  .image img {
+      width: 90%;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      text-align: center;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+
+  }
+
+  .item {
+      position: relative;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: #0b2027;
+      border-radius: 10px;
+      box-shadow: 1px 2px 4px rgb(96, 91, 91);
+      width: 280px;
+      height: 510px;
+      margin: 20px;
+      float: left;
+  }
+
+  .content {
+    justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      color: #cfd7c7;
+      overflow-wrap: break-word;
+  }
+
+  .content h3 {
+      font-size: 1.25rem;
+      color: #cfd7c7;
+  }
+
+  .content h1 {
+    font-family: inherit;
+    font-weight: bolder;
+    font-size: 35px;
+    color: #cfd7c7;
+}
+
+  .actions {
+      text-align: center;
+
+
+  }
+
+  .actions button {
+      position: absolute;
+      font: inherit;
+      font-weight: normal;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      border: 0.1px solid aliceblue;
+      background-color: transparent;
+      padding: 0.4rem 0.4rem;
+      /* margin-top: 10px;
+      margin-right: 3px; */
+      border-radius: 4px;
+      bottom: 15px;
+      right: 10px;
+
+  }
+
+  .editBtn {
+        width: 60px;
+      bottom: 15px;
+      left: 65px;
+  }
+
+  .deleteBtn {
+      bottom: 15px;
+      left: 132px;
+  }
+
+  .actions button:hover,
+  .actions button:active {
+      background-color: rgb(50, 64, 88);
+  }
+
+
+  .boxshadow {
+      -webkit-box-shadow: 0 1px 1px rgba(72, 78, 85, .6);
+      box-shadow: 0 1px 1px rgba(72, 78, 85, .6);
+      -webkit-transition: all .2s ease-out;
+      -moz-transition: all .2s ease-out;
+      -ms-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+  }
+
+  .boxshadow:hover {
+      -webkit-box-shadow: 0 20px 40px rgba(72, 78, 85, .6);
+      box-shadow: 0 20px 40px rgba(72, 78, 85, .6);
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+      transform: translateY(-5px);
+  }
+
+  .section {
+      margin-top: 200px;
+      margin-left: 500px;
+  }
