@@ -1,12 +1,5 @@
-
-
-/* body { */
-   /* background-color: rgb(117, 192, 192); */
-   /* background-color: rgb(96, 95, 95); */
-   /* background-image: url(/src/images/texture-2119294_1920.jpg); */
-
-/* } */
-
+/* I've made dynamic body color change so every component have different body color
+*/
 :root {
     --bodyColor: #000;
 }
