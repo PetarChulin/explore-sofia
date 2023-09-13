@@ -6,13 +6,21 @@ import { FirstContext } from "../store/first-context";
 import { TitleContext } from "../store/title-context";
 import { ImageContext } from "../store/image-context";
 import { DescriptionContext } from "../store/description-ctx";
+import { InputContext } from "../store/input-context";
 
 function Navigation() {
 
-  const { first, setFirst } = useContext(FirstContext);
-  const { title, setTitle } = useContext(TitleContext);
-  const { image, setImage } = useContext(ImageContext);
-  const {description, setDescription} = useContext(DescriptionContext);
+    const {
+    setFirst,
+    setTitle,
+    setImage,
+    setDescription,
+  } = useContext(InputContext);
+
+  // const { first, setFirst } = useContext(FirstContext);
+  // const { title, setTitle } = useContext(TitleContext);
+  // const { image, setImage } = useContext(ImageContext);
+  // const {description, setDescription} = useContext(DescriptionContext);
 
   const clearFields = () => {
 

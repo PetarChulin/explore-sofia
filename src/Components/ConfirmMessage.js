@@ -5,6 +5,7 @@ import MuiAlert from '@mui/material/Alert';
 import { ConfirmContext } from '../store/confirm-context';
 import { TextContext } from '../store/text-ctx';
 import { SeverityContext } from '../store/severity-ctx';
+import { InputContext } from '../store/input-context';
 
 
 const Alert = forwardRef(function Alert(props, ref) {
@@ -14,8 +15,10 @@ const Alert = forwardRef(function Alert(props, ref) {
 export default function Confirmation() {
 
   const {open, setOpen} = useContext(ConfirmContext);
-  const {text, setText} = useContext(TextContext);
-  const {severity, setSeverity} = useContext(SeverityContext);
+  // const {text, setText} = useContext(TextContext);
+  // const {severity, setSeverity} = useContext(SeverityContext);
+
+  const {text, setText, severity, setSeverity} = useContext(InputContext);
 
 
   const handleClose = (event, reason) => {

@@ -2,12 +2,10 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "../css/Card.module.css";
 import { EditContext } from "../store/isedit-context";
-import { FirstContext } from "../store/first-context";
-import { TitleContext } from "../store/title-context";
 import { UuidContext } from "../store/uuid-context";
-import { ImageContext } from "../store/image-context";
 import { Swiper, SwiperSlide } from "swiper/react";
 import setBodyColor from '../setBodyColor'
+import { InputContext } from "../store/input-context";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,22 +14,14 @@ import "../css/swiper.css";
 import { Navigation, Pagination } from "swiper";
 import Modal from "./Modal";
 import { ModalContext } from "../store/modal-ctx";
-import { SelectedContext } from "../store/selected-ctx";
-import { DescriptionContext } from "../store/description-ctx";
-import { Slide } from "react-reveal";
 
 function Card(props) {
 
   setBodyColor({color: "#aae3ce"});
 
-  const { setIsEdit } = useContext(EditContext);
-  const { setFirst } = useContext(FirstContext);
-  const { setTitle } = useContext(TitleContext);
-  const { setImage } = useContext(ImageContext);
-  const { setDescription} = useContext(DescriptionContext);
-  const { setTempUuid } = useContext(UuidContext);
+  const {setFirst , setTitle, setImage, setDescription, setIsEdit, setTempUuid, setSelected} = useContext(InputContext);
+
   const {modal, setModal} = useContext(ModalContext);
-  const {setSelected} = useContext(SelectedContext);
 
   const [selectedItem, setSelectedItem] = useState("");
 

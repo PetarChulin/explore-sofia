@@ -3,20 +3,16 @@ import { db } from "../firebase";
 import { ref, remove } from "firebase/database";
 
 import classes from "../css/Modal.module.css";
-import { TextContext } from "../store/text-ctx";
-import { SeverityContext } from "../store/severity-ctx";
 import { ConfirmContext } from "../store/confirm-context";
 import { ModalContext } from "../store/modal-ctx";
-import { SelectedContext } from "../store/selected-ctx";
+import { InputContext } from "../store/input-context";
 
 const Modal = (props) => {
 
+  const {  setText, setSeverity, selected} = useContext(InputContext);
   const { setOpen } = useContext(ConfirmContext);
-  const { setText } = useContext(TextContext);
-  const { setSeverity } = useContext(SeverityContext);
 
   const {modal, setModal} = useContext(ModalContext);
-  const {selected} = useContext(SelectedContext);
 
   const closeHandler = () => {
     setModal(null);

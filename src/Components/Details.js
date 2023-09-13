@@ -1,24 +1,25 @@
-import { useContext, useEffect, useState } from "react";
-import { FirstContext } from "../store/first-context";
-import { TitleContext } from "../store/title-context";
-import { ImageContext } from "../store/image-context";
-import { UuidContext } from "../store/uuid-context";
+import { useContext } from "react";
 import setBodyColor from '../setBodyColor'
+import { InputContext } from "../store/input-context";
 
 
 import classes from "../css/Details.module.css";
-import { DescriptionContext } from "../store/description-ctx";
 import { useNavigate } from "react-router-dom";
 
 function Details() {
 
   setBodyColor({color: "#839fa8"});
 
-
-  const { first, setFirst } = useContext(FirstContext);
-  const { title, setTitle } = useContext(TitleContext);
-  const { image, setImage } = useContext(ImageContext);
-  const { description, setDescription } = useContext(DescriptionContext);
+  const  {
+    first,
+    setFirst,
+    title,
+    setTitle,
+    image,
+    setImage,
+    description,
+    setDescription,
+  } = useContext(InputContext);
 
   const navigate = useNavigate();
 
